@@ -17,6 +17,11 @@ public class ResultUtils {
     public static <T> BaseResponse<T> success(T data) {
         return new BaseResponse<>(0, data, "ok");
     }
+
+    /**
+     * 成功
+     * @return
+     */
     public static  BaseResponse success() {
         return new BaseResponse(0, true, "ok");
     }

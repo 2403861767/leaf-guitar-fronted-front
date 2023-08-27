@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seeleaf.guitarbackend.mapper.MusicMapper">
+
+    <resultMap id="BaseResultMap" type="com.seeleaf.guitarbackend.domain.entity.Music">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="musicName" column="musicName" jdbcType="VARCHAR"/>
+            <result property="singer" column="singer" jdbcType="VARCHAR"/>
+            <result property="producer" column="producer" jdbcType="VARCHAR"/>
+            <result property="musicDescription" column="musicDescription" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="difficult" column="difficult" jdbcType="INTEGER"/>
+            <result property="popularity" column="popularity" jdbcType="INTEGER"/>
+            <result property="typeTag" column="typeTag" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="originalEdition" column="originalEdition" jdbcType="INTEGER"/>
+            <result property="createUserId" column="createUserId" jdbcType="BIGINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,musicName,singer,
+        producer,musicDescription,price,
+        difficult,popularity,typeTag,
+        status,originalEdition,
+        createUserId,createTime,updateTime,
+        isDelete
+    </sql>
+</mapper>
